@@ -1,77 +1,85 @@
-/* General page styling */
 body {
-  font-family: Arial, sans-serif;
-  background: #0f0f0f;
-  color: #fff;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #020b06;
+    color: white;
+    overflow-x: hidden;
 }
 
-/* Header section */
-header {
-  background: #111;
-  text-align: center;
-  padding: 15px 0;
-  border-bottom: 2px solid #0ff;
+.container {
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
 }
 
-h1 {
-  color: #0ff;
-  margin: 0;
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #30e07b;
+    text-shadow: 0 0 15px #27c96b;
 }
 
-/* Dashboard summary cards */
-.dashboard {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px;
+.subtitle {
+    margin-top: -10px;
+    font-size: 16px;
+    color: #9cf3c6;
+}
+
+.stats-grid {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
 .card {
-  background: #1b1b1b;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  width: 30%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    position: relative;
 }
 
-.card h3 {
-  color: #0ff;
+.card p {
+    margin-top: -5px;
+    opacity: 0.8;
 }
 
-/* New order form and orders table */
-.new-order,
-.orders-list {
-  background: #1b1b1b;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
+.circle {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    border: 5px solid;
+    animation: rotate 2s linear infinite;
 }
 
-input, select, button {
-  padding: 10px;
-  margin: 5px;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
+.green .circle { border-color: #1ec971; box-shadow: 0 0 20px #1ec971; }
+.blue .circle { border-color: #00b8ff; box-shadow: 0 0 20px #00b8ff; }
+.purple .circle { border-color: #d500ff; box-shadow: 0 0 20px #d500ff; }
+.red .circle { border-color: #ff4141; box-shadow: 0 0 20px #ff4141; }
+
+.card h2 {
+    font-size: 30px;
+    margin: 5px 0;
 }
 
-button {
-  background: #0ff;
-  color: #000;
-  cursor: pointer;
-  font-weight: bold;
+.footer-message {
+    margin-top: 40px;
+    padding: 15px;
+    font-size: 16px;
+    background: linear-gradient(to right, #21cf63, #00ffa6);
+    color: #003319;
+    border-radius: 12px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 25px #1ec971;
 }
 
-/* Table styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-th, td {
-  padding: 10px;
-  border-bottom: 1px solid #333;
-  text-align: left;
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
 }
