@@ -1,60 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SMM Panel</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Bingwa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>💎 Glenn SMM Panel</h1>
-  </header>
 
-  <section class="dashboard">
-    <div class="card">
-      <h3>Total Orders</h3>
-      <p id="ordersCount">0</p>
+    <div class="container">
+
+        <h1 class="title">PRINCE BINGWA</h1>
+        <p class="subtitle">Agent Prince Bingwa Statistics</p>
+
+        <div class="stats-grid">
+
+            <div class="card green">
+                <div class="circle"></div>
+                <h2 id="totalPurchase">2,389</h2>
+                <p>Total Purchase</p>
+            </div>
+
+            <div class="card blue">
+                <div class="circle"></div>
+                <h2 id="todayPurchase">678</h2>
+                <p>Today Purchase</p>
+            </div>
+
+            <div class="card purple">
+                <div class="circle"></div>
+                <h2 id="todaySuccess">678</h2>
+                <p>Today Successful Purchase</p>
+            </div>
+
+            <div class="card red">
+                <div class="circle"></div>
+                <h2 id="issues">0</h2>
+                <p>Issues</p>
+            </div>
+
+        </div>
+
+        <div class="footer-message">
+            Keep restarting your bot after every 24hrs for successful execution of bundles to clients
+        </div>
+
     </div>
-    <div class="card">
-      <h3>Completed</h3>
-      <p id="completedCount">0</p>
-    </div>
-    <div class="card">
-      <h3>Pending</h3>
-      <p id="pendingCount">0</p>
-    </div>
-  </section>
 
-  <section class="new-order">
-    <h2>Place New Order</h2>
-    <form id="orderForm">
-      <input type="text" id="username" placeholder="Username" required />
-      <input type="number" id="quantity" placeholder="Quantity" required />
-      <select id="service">
-        <option value="followers">Followers</option>
-        <option value="likes">Likes</option>
-        <option value="views">Views</option>
-      </select>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <section class="orders-list">
-    <h2>Recent Orders</h2>
-    <table id="ordersTable">
-      <thead>
-        <tr>
-          <th>User</th>
-          <th>Service</th>
-          <th>Quantity</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </section>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
